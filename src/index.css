@@ -57,7 +57,7 @@
 
 
 /* Home Page Css */
- .homepage-container {
+ /* .homepage-container {
     position: relative;
     height: 100vh; 
     display: flex;
@@ -67,40 +67,78 @@
     text-align: center;
   }
   
-  .full-width-video {
+  .full-width-picture {
     width: 100%;
-    height: 100%; 
+    height: auto; 
+    max-height: 40rem;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-  }
-  
-  .centered-text {
-    color: white;
-    font-size: xl-large;
-    max-width: 100%; 
-  }
-  
-  .paragraph{
-    font-size: larger; 
+    opacity: 0.6;
+    filter: brightness(1.1);
   }
 
-  .centered-items{
-    max-height: 90%;
+
+  /* Additional styling for the homepage */
+
+.homepage-container {
+    height: 100vh; /* Ensure the container covers the full viewport height */
   }
   
-  .started-btn {
-    background-color: white;
-    color: rgb(44, 109, 231);
-    font-family: Baskerville;
+  .full-width-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    position: absolute; /* Make the image absolute to place content above it */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send the image to the background */
+    opacity: 0.6;
+    filter: brightness(1.1);
   }
   
-  .started-btn:hover {
-    background-color: rgb(44, 109, 231);
-    color: white;
-  }  
+  .centered-items {
+    max-width: 400px;
+  }
+
+  .centered-items p{
+    font-weight: 400;
+  }
+  
+  @media (max-width: 767.98px) {
+    .centered-items {
+      max-width: 90%;
+      text-align: center;
+    }
+    .text-end {
+      text-align: center !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .centered-items {
+      max-width: 75%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .centered-items {
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  
+  .btn-lg {
+    padding: 0.5rem 2rem;
+    font-size: 1.25rem;
+  }
+  
   
 /* Media Querie for Navbar */
 @media (max-width: 991px){
@@ -165,7 +203,7 @@
 
 /* Save Marksheet css */
 .save-page{
-    background-color: #EEA47FFF;
+    background-color: hsla(0,0%,100%,.8);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100vh;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './Components/Navbar';
 import HomePage from './Components/HomePage';
@@ -14,37 +13,8 @@ const App = () => {
     return(
        <>   
         <Navbar />
-             <Routes>
-                <Route 
-                    path="/"
-                    element={<HomePage/>}
-                />
-
-                <Route 
-                    path="/Get_Started"
-                    element={<Get_Started/>}
-                />
-
-                <Route 
-                    path="/Save_marksheet"
-                    element={<Save_marksheet/>}
-                />
-
-                <Route 
-                    path="/View_marksheets"
-                    element={<View_marksheets/>}
-                />
-
-                <Route 
-                    path="/About"
-                    element={<About/>}
-                />
-
-                <Route 
-                    path="/Contact"
-                    element={<Contact/>}
-                />
-            </Routes> 
+        <HomePage />      
+        <View_marksheets />
         <Footer />
        </>
     )
