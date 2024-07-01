@@ -17,13 +17,11 @@ const Contact = () => {
         });
     };
 
-    // Function to handle form submission
     const handleSubmit = () => {
         // Implement your submit logic here
-        console.log(formData);
+
     };
 
-    // Function to handle clearing the form
     const handleClear = () => {
         setFormData({
             name: "",
@@ -35,9 +33,17 @@ const Contact = () => {
     return(
         <div className="container-fluid save-page">
             <div className="row justify-content-center">
-                <div className="col-10 col-md-8 about-content mt-5 mb-5">
-                    <div className="form-heading text-center mb-4">
-                        <h2>Contact Us</h2>
+                <div className="col-10 col-md-8 about-content mt-1 mb-2">
+                    <div className="feedback-heading text-center">
+                        <h2>Feedback</h2>
+                    </div>
+
+                    <div className="divider">
+                        <hr />
+                    </div>
+
+                    <div className="mb-5">
+                        <p className="Feedback-tip">* Give your feedback for upgrade my project.</p>
                     </div>
 
                     <form>

@@ -21,9 +21,6 @@ const Navbar = () => {
                             <Link className="nav-link active" to="/Get_Started">Our Services</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/Save_marksheet">Save</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link className="nav-link active" to="/View_marksheets">Find</Link>
                         </li>
                         <li className="nav-item">
