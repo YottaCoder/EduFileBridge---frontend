@@ -8,12 +8,14 @@ import Save_marksheet from './Components/Save_marksheet';
 import View_marksheets from './Components/View_marksheets';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import Services from './Components/Services'
 
 const App = () => {
     return(
        <>   
         <Navbar />
-        <HomePage />      
+        <HomePage />    
+        <Services />  
         <View_marksheets />
         <Footer />
        </>

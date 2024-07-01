@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/Get_Started">Over Services</Link>
+                            <Link className="nav-link active" to="/Get_Started">Our Services</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active" to="/Save_marksheet">Save</Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
                             <Link className="nav-link active" to="/About">About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/Contact">Contact Us</Link>
+                            <Link className="nav-link active" to="/Contact">Feedback</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link active" data-bs-toggle="modal" data-bs-target="#loginModal">{login}</a>

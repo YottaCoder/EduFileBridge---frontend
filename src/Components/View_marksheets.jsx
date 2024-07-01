@@ -1,41 +1,72 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const View_marksheets = () => {
+    const [educationType, setEducationType] = useState('Select Education Type');
+    const [studentId, setStudentId] = useState('');
 
-    const [academicLevel, setacademicLevel] = useState("Select Ones");
+    const handleEducationType = (type) => {
+        setEducationType(type);
+    };
 
-    const handleacademicLevel = (option) => {
-        setacademicLevel(option)
-    }
-
+    const validate = (field) => {
+        // Add your validation logic here
+    };
 
     return (
-        <div className="container-fluid save-page">
-            <div className="row justify-content-center">
-                <div className="col-8 save-form mt-5 text-white">
-                    <div className="form-heading">
-                        <h2>View Marksheets</h2>
-                    </div>
-                    <div className="d-flex flex-wrap align-items-center save-marksheet-form">
-                    <div className=" col-12 col-md-3 mb-3">
-                                <div className="dropdown">
-                                    <button className="btn dropdown-toggle standard-btn w-100" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {academicLevel}
-                                    </button>
-                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <li><button className="dropdown-item" type="button" onClick={() => handleacademicLevel("1-10")}>Standard 1-10</button></li>
-                                        <li><button className="dropdown-item" type="button" onClick={() => handleacademicLevel("11-12")}>Standard 11-12</button></li>
-                                        <li><button className="dropdown-item" type="button" onClick={() => handleacademicLevel("Bachelor")}>Bachelor</button></li>
-                                        <li><button className="dropdown-item" type="button" onClick={() => handleacademicLevel("Master")}>Master</button></li>
-                                    </ul>
+        <div className="container-fluid px-1 mx-auto view-body">
+            <div className="row d-flex justify-content-center">
+                <div className="col-xl-10 col-lg-10 col-md-9 col-11 text-center">
+                    <h3>Find Student Marksheet</h3>
+                    <p className="blue-text">
+                        Find Student Marksheet Using<br />
+                        Education Type and Student ID
+                    </p>
+                    <div className="card">
+                        <form className="form-card">
+                            <div className="row justify-content-between text-left find-form">
+                                <div className="form-group col-sm-6 flex-column d-flex">
+                                    <label className="form-control-label px-3">Education Type
+                                        <span className="text-danger"> *</span>
+                                    </label>
+                                    <div className="dropdown">
+                                        <button 
+                                            className="btn w-100 find-dropdown text-start" 
+                                            type="button" 
+                                            id="dropdownMenu2" 
+                                            data-bs-toggle="dropdown" 
+                                            aria-expanded="false"
+                                        >
+                                            {educationType}
+                                        </button>
+                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li><button className="dropdown-item" type="button" onClick={() => handleEducationType("1-10")}>1-10</button></li>
+                                            <li><button className="dropdown-item" type="button" onClick={() => handleEducationType("11-12")}>11-12</button></li>
+                                            <li><button className="dropdown-item" type="button" onClick={() => handleEducationType("Bachelor")}>Bachelor</button></li>
+                                            <li><button className="dropdown-item" type="button" onClick={() => handleEducationType("Master")}>Master</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="form-group col-sm-6 flex-column d-flex">
+                                    <label className="form-control-label px-3">Student ID
+                                        <span className="text-danger"> *</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="studentId" 
+                                        name="studentId" 
+                                        placeholder="Enter Student ID" 
+                                        value={studentId}
+                                        onBlur={() => validate(1)}
+                                        onChange={(e) => setStudentId(e.target.value)} 
+                                    />
                                 </div>
                             </div>
-                        <div className="col-12 col-md-6 mb-3 find-marksheet">
-                            <input type="text" className="form-control form-control-lg" placeholder="Enter Student id" />
-                        </div>
-                        <div className="col-12 col-md-2 mb-3">
-                            <button type="button" className="btn btn-lg standard-btn w-100 w-100">Find...</button>
-                        </div>
+                            <div className="row justify-content-end">
+                                <div className="form-group col-sm-6">
+                                    <button type="submit" className="btn-block btn-primary">Find</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

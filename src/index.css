@@ -114,6 +114,22 @@
     font-size: 1.25rem;
   }
   
+
+/* Over Services CSS */
+
+.services {
+    font-family: Arial, sans-serif;
+  }
+  
+  .App-header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .App-header h1 {
+    margin: 0;
+  }
+  
   
 /* Media Querie for Navbar */
 @media (max-width: 991px){
@@ -145,6 +161,96 @@
         width: 100%;
     }
 
+}
+
+/* View marksheet css*/
+
+.view-body{
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card{
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)
+}
+
+.blue-text{
+    color: #00BCD4;
+}
+
+.form-control-label{
+    margin-bottom: 0;
+}
+
+.find-form input, .find-form textarea{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300;
+}
+
+.find-dropdown{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300;
+}
+
+.find-dropdown:hover{
+    border: 1px solid #ccc;
+}
+
+.find-dropdown:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+input:focus, textarea:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+.btn-block{
+    padding: 8px 30px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+.btn-block:hover{
+    color: blue !important;
+    background-color: white;
+}
+
+button:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
 }
 
 /* Get Started Css */
