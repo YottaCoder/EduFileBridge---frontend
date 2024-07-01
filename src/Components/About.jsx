@@ -21,7 +21,7 @@ const About = () => {
             students, educators, and institutions alike.
             </p>
             <p>
-            Feel free to modify it to better suit your project's specific features and goals!
+            EdufileBridge ensures top-tier security measures to protect the integrity and confidentiality of all marksheets.
             </p>
             <div className="divider">
               <hr className="my-4" />
