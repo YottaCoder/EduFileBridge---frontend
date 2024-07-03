@@ -11,6 +11,19 @@ const Login = ({ handleRegisterPopUp, handleForgotPass1 }) => {
         setShowPassword(!showPassword);
     };
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [validateEmail, setvalidateEmail] = useState(false);
+    const [validatePassword, setvalidatePassword] = useState(false);
+
+
+    const handleLogin = () => {
+        if(email == null){
+            setvalidateEmail(true);
+        }
+    }
+
     return(
         <>
             <div className="modal-dialog modal-dialog-centered">
@@ -40,8 +53,18 @@ const Login = ({ handleRegisterPopUp, handleForgotPass1 }) => {
                         {/* <!-- Login Form --> */}
                         <form>
                             <div className="form-outline mb-4">
-                                <input type="email" id="form3Example3" className="form-control form-control-lg" placeholder="Enter a valid email address" />
+
+                                <input 
+                                    type="email" 
+                                    id="form3Example3" 
+                                    className="form-control form-control-lg" 
+                                    placeholder="Enter a valid email address" 
+                                    value={email}
+                                    onChange={ (e) => setEmail(e.target.value)}
+                                />
+
                             </div>
+                            {validateEmail == true && <p className="login-warning">Please Enter Email address</p>}
                             <div className="input-group mb-3">
                                 <input 
                                     type={showPassword ? "text" : "password"} 
@@ -67,7 +90,7 @@ const Login = ({ handleRegisterPopUp, handleForgotPass1 }) => {
                                 <a className="text-body fgt-pass" onClick={ handleForgotPass1 }>Forgot password?</a>
                             </div>
                             <div className="text-center text-lg-start mt-4 pt-2">
-                                <button type="button" className="btn btn-primary btn-lg" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}>Login</button>
+                                <button type="button" className="btn btn-primary btn-lg" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }} onClick={handleLogin}>Login</button>
                                 <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a className="link-danger" onClick={handleRegisterPopUp}>Register</a></p>
                             </div>
                         </form>

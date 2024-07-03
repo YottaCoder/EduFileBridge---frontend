@@ -8,12 +8,8 @@
     margin-bottom: 0px;
 }
 .web-logo{
-    height: 3rem;
-}
-
-.web-logo:hover{
-    filter: brightness(80%);
-    cursor: pointer;
+    height: 4rem;
+    width: 7rem;
 }
 
 .nav-link{
@@ -392,6 +388,10 @@ background: #eee;
 
 .password-input{
     border-right: none;
+}
+
+.login-warning{
+    color: red;
 }
 
 /* Term and Condition */
