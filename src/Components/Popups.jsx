@@ -9,6 +9,7 @@ import ForgotPass3 from "./ForgotPasswordPages/ForgotPass3";
 
 const Popups = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [showEmailConfirm, setShowEmailConfirm] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(true);
   const [showTAndCModal, setshowTAndCModal] = useState(false);
   const [showForgotPass1, setShowForgotPass1] = useState(false);

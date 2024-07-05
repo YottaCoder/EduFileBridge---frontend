@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 import About from './Components/About';
 import Navbar from './Components/Navbar';
@@ -14,11 +15,24 @@ const App = () => {
     return(
        <>   
         <Navbar />
-        <HomePage />    
-        <Services />  
-        <View_marksheets />
-        <About />
-        <Contact />
+        <HomePage />
+
+        <Element name='Services'>
+            <Services /> 
+        </Element> 
+
+        <Element name='View_marksheets'>
+            <View_marksheets />
+        </Element>
+
+        <Element name='About'>
+            <About />
+        </Element>
+
+        <Element name='Contact'>
+            <Contact />
+        </Element>
+
         <Footer />
        </>
     )
