@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-const Register = ({ handleLoginPopUp, handleTAndCPopUp }) => {
+const Register = ({ handleLoginPopUp, handleTAndCPopUp,handleEmailConfirm }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [fullName, setFullName] = useState('');
@@ -129,7 +129,7 @@ const Register = ({ handleLoginPopUp, handleTAndCPopUp }) => {
                 <button
                   type="button"
                   className="btn btn-primary btn-lg mx-auto"
-                  onClick={registerUser}
+                  onClick={handleEmailConfirm}
                   style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}
                 >
                   Register
